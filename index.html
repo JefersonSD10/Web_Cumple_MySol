@@ -76,17 +76,17 @@
   /* ─── Stars Background ─── */
 /* ─── Stars Background ─── */
   #stars-canvas {
-    position: fixed; top: 0; left: 0;
-    width: 100vw; 
-    height: 100vh;
-    height: 100dvh; /* 👈 Se adapta a la barra de direcciones del celular */
+    position: fixed; top: -1px; left: -1px;
+    width: calc(100vw + 2px); 
+    height: calc(100vh + 2px);
+    height: calc(100dvh + 2px);
     z-index: 0;
     pointer-events: none;
     border: none !important;
     outline: none !important;
     margin: 0 !important;
     padding: 0 !important;
-    display: block; 
+    display: block;
   }
 
   /* ─── Floating Petals ─── */
@@ -675,8 +675,14 @@ backdrop-filter:blur(10px);
 
   /* ─── FIREWORKS CANVAS ─── */
   #fireworks-canvas {
-    position: fixed; inset: 0; z-index: 500;
+    position: fixed; top: -1px; left: -1px; 
+    width: calc(100vw + 2px);
+    height: calc(100vh + 2px);
+    z-index: 500;
     pointer-events: none;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   /* ─── MUSIC PLAYER ─── */
