@@ -1613,13 +1613,15 @@ backdrop-filter:blur(10px);
   <p style="font-family:'Dancing Script',cursive; color:rgba(247,168,184,0.5); margin-bottom:0.5rem;">
     Un video que preparé especialmente para ti ❤️
   </p>
-  <div class="video-container" id="video-container">
-    <div class="video-hint">
-      <div class="video-play-icon">▶</div>
-      <p>Reproduce este hermoso video ❤️</p>
-    </div>
-    <video id="main-video" controls></video>
-  </div>
+  <div class="video-container loaded" id="video-container" style="border: none; padding-top: 56.25%; height: 0; position: relative;">
+  <iframe src="https://www.youtube.com/embed/zSh0Vcx4J28?rel=0" 
+          title="Video para mi Sol" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 20px;">
+  </iframe >
+</div>
 </section>
 
 <div class="divider">✦ ✦ ✦</div>
@@ -1930,12 +1932,7 @@ document.getElementById('photo-modal').addEventListener('click', function(e) {
 });
 
 // ─── VIDEO ───
-// ─── VIDEO ───
-const videoContainer = document.getElementById('video-container');
-const mainVideo = document.getElementById('main-video');
-
-mainVideo.src = 'video/mensaje.mp4';
-videoContainer.classList.add('loaded');
+// Configurado con el iframe de YouTube de forma directa en el HTML
 
 // ─── ENVELOPE LETTER ───
 const envelopeWrapper = document.getElementById('envelope-wrapper');
